@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position:fixed;
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            border-bottom: 2px solid black;
+
+        }
+
+        nav h1 {
+            margin: 12px 10px 12px 10px;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            float: left;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        nav h1 span {
+            padding-left: 5px;
+            font-family: 'Raleway', sans-serif;
+            opacity: 0.5;
+        }
+
+        nav .nav-bar {
+            margin-top: 16px;
+            float: right;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        nav .nav-bar a {
+            font-size: 20px;
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 15px 10px 15px;
+            text-decoration:none;
+            color:black;
+        }
+
+        nav h1:hover {
+            background-color: grey;
+            color: white;
+        }
+
+        nav .nav-bar a:hover {
+            background-color: grey;
+            cursor: pointer;
+            color: white;
+        }
+
+        .front-image::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top:82px;
+            width: 100%;
+            height: 600px;
+            background-image: url("image/architect.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        .front-image {
+            display: flex;
+            width: 100%;
+            height: 700px;
+            margin-bottom: 50px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-family: 'Raleway', sans-serif;
+            color: white;
+        }
+
+        .front-image h1 {
+            padding: 20px;
+            font-size: 30px;
+            background-color: rgba(0, 0, 0, 0.8)
+        }
+
+        .front-image h2 {
+            font-size: 28px;
+            padding: 20px;
+        }
+
+        main {
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+            width: 100%;
+            height: 600px;
+            padding-top: 40px;
+        }
+
+        main h1 {
+            padding-left: 30px;
+            font-size: 25px;
+        }
+
+        main hr {
+            margin-left: 30px;
+            margin-right: 30px;
+            color: black;
+            background-color: black;
+        }
+
+        main .Project {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        main .Project1 {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        main .Project div>p {
+            width: 45%;
+            background-color: black;
+            color: white;
+            padding: 10px 15px 10px 15px;
+            box-sizing: border-box;
+        }
+
+        main .Project .one>p {
+            width: 55%;
+            padding: 10px 20px 10px 20px;
+        }
+
+        main .Project1 div>p {
+            width: 45%;
+            background-color: black;
+            color: white;
+            padding: 10px 15px 10px 15px;
+            box-sizing: border-box;
+        }
+
+        main .Project1 .five>p {
+            width: 55%;
+            padding: 10px 20px 10px 20px;
+        }
+
+        main .Project .one {
+            width: 22%;
+            height: 200px;
+            background-image: url("image/one.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main .Project .two {
+            width: 22%;
+            height: 200px;
+            background-image: url("image/two.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main .Project .three {
+            width: 22%;
+            height: 200px;
+            background-image: url("image/three.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main .Project .four {
+            width: 22%;
+            height: 200px;
+            background-image: url("image/four.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main .Project1 .five {
+            width: 22%;
+            height: 200px;
+            background-image: url("image/five.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main .Project1 .six {
+            width: 22%;
+            height: 200px;
+            background-image: url("image/six.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main .Project1 .seven {
+            width: 22%;
+            height: 200px;
+            background-image: url("image/seven.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        main .Project1 .eight {
+            width: 22%;
+            height: 200px;
+            background-image: url("image/eight.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .AB {
+            margin-bottom: 25px;
+        }
+
+        section .head {
+            margin-left: 20px;
+            font-size: 25px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        section hr {
+            margin-left: 20px;
+            margin-right: 20px
+        }
+
+        section .intro {
+            font-size: 20px;
+            font-family: 'Raleway', sans-serif;
+            padding: 15px 20px 35px 20px;
+        }
+
+        section .cards {
+            display: flex;
+            width: 95%;
+            height: 500px;
+            box-sizing: border-box;
+            /* border:1px solid black; */
+            margin-left: 20px;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        section .cards .card1 {
+            /*border: 1px solid black;*/
+            width: 22%;
+            height: 400px;
+        }
+
+        section .cards .card2 {
+            /* border: 1px solid black;*/
+            width: 22%;
+            height: 400px;
+        }
+
+        section .cards .card3 {
+            /* border: 1px solid black;*/
+            width: 22%;
+            height: 400px;
+        }
+
+        section .cards .card4 {
+            /*border: 1px solid black;*/
+            width: 22%;
+            height: 400px;
+        }
+
+        section .cards div>img {
+            width: 100%;
+            height: 200px;
+            background: transparent;
+        }
+
+        section .cards div>h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 25px;
+            padding-top: 10px;
+            /* margin-left:10px;*/
+        }
+
+        section .cards div>h4 {
+            /*margin-left:10px;*/
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            padding-top: 10px;
+            opacity: 0.6;
+
+        }
+
+        section .cards div>p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            padding-top: 10px;
+            
+        }
+
+        section .cards div>button {
+            display: inline-block;
+            font-size: 18px;
+            margin-top: 15px;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            text-align: center;
+            padding-left: 40.5%;
+            padding-right: 36%;
+            background: transparent;
+
+        }
+
+        section .cards div>button:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+        .contact{
+            margin-bottom:40px;
+        }
+        .contact h1 {
+            margin-left: 20px;
+            font-size: 25px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .contact hr {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .contact form input[type="text"] {
+            margin-top: 15px;
+            margin-left: 20px;
+            width: 90%;
+            /*padding-top: 18px;*/
+            line-height: 2;
+            font-size: 18px;
+
+        }
+
+        .contact form input[type="submit"] {
+            padding: 8px 10px 8px 10px;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color:black;
+            color:white;
+        }
+        .contact form input[type="submit"]:hover{
+            background-color:silver;
+            color:black;
+            cursor: pointer;
+        }
+        footer{
+            padding-top:50px;
+            text-align:center;
+            background-color:black;
+            color:white;
+            width:100%;
+            height:100px;
+            box-sizing:border-box;
+        }
+        @media (min-width:1001px) and (max-width:1300px){
+            main{
+                height:900px;
+                margin-bottom:350px;
+            }
+            main .Project{
+                height:550px;
+                margin-bottom:5px;
+            }
+            main .Project1{
+                height:550px;
+                margin-bottom:5px;
+            }
+            main .Project .one{
+                width:40%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .two{
+                width:40%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .three{
+                width:40%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .four{
+                width:40%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .one p{
+                width:40%;
+            }
+            main .Project div > p{
+                width:40%;
+                padding-left:35px;
+            }
+            main .Project1 .five{
+                width:40%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .six{
+                width:40%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .seven{
+                width:40%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .eight{
+                width:40%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .five p{
+                width:40%;
+            }
+            .AB{
+                height:1100px;
+        
+
+            }
+            section .cards{
+                margin-left:10px;
+            }
+            section .cards div>button{
+                padding-right:42%;
+            }
+            section .cards .card1{
+                width:40%;
+                margin-bottom:8px;
+            }
+            section .cards .card2{
+                width:40%;
+                margin-bottom:8px;
+            }
+            section .cards .card3{
+                width:40%;
+                margin-bottom:8px;
+            }
+            /*section .cards .card3 > button{
+               margin-top:-5px; 
+            }*/
+            section .cards .card4{
+                width:40%;
+                margin-bottom:8px;
+            }   
+        }
+        @media (min-width:801px) and (max-width:1000px){
+            main{
+                height:900px;
+                margin-bottom:350px;
+            }
+            main .Project{
+                height:550px;
+                margin-bottom:5px;
+            }
+            main .Project1{
+                height:550px;
+                margin-bottom:5px;
+            }
+            main .Project .one{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .two{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .three{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .four{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .one p{
+                width:40%;
+            }
+            main .Project div > p{
+                width:40%;
+                padding-left:35px;
+            }
+            main .Project1 .five{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 div > p{
+                width:40%;
+                padding-left:35px;
+            }
+            main .Project1 .six{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .seven{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .eight{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .five p{
+                width:40%;
+            }
+            .AB{
+                height:1200px;
+        
+
+            }
+            section .cards{
+                margin-left:10px;
+            }
+            section .cards div>button{
+                padding-right:42%;
+            }
+            section .cards .card1{
+                width:45%;
+                margin-bottom:8px;
+            }
+            section .cards .card2{
+                width:45%;
+                margin-bottom:8px;
+            }
+            section .cards .card3{
+                width:45%;
+                margin-bottom:8px;
+            }
+            /*section .cards .card3 > button{
+               margin-top:-5px; 
+            }*/
+            section .cards .card4{
+                width:45%;
+                margin-bottom:8px;
+            }
+        }
+      /*  @media (max-width:801px) and (max-width:849px){
+            
+            main{
+                height:900px;
+                margin-bottom:350px;
+            }
+            main .Project{
+                height:550px;
+                margin-bottom:5px;
+            }
+            main .Project1{
+                height:550px;
+                margin-bottom:5px;
+            }
+            main .Project .one{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .two{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .three{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project .four{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project div > p{
+                width:40%;
+                padding-left:35px;
+            }
+            main .Project1 .five{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 div > p{
+                width:40%;
+                padding-left:35px;
+            }
+            main .Project1 .six{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .seven{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .eight{
+                width:45%;
+                height:250px;
+                margin-bottom:2px;
+            }
+            main .Project1 .five p{
+                width:45%;
+            }
+            main .Project .one p{
+                width:45%;
+            }
+            .AB{
+                height:1200px;
+        
+
+            }
+            section .cards{
+                margin-left:10px;
+            }
+            section .cards div>button{
+                padding-right:42%;
+            }
+            section .cards .card1{
+                width:45%;
+                margin-bottom:8px;
+            }
+            section .cards .card2{
+                width:45%;
+                margin-bottom:8px;
+            }
+            section .cards .card3{
+                width:45%;
+                margin-bottom:8px;
+            }
+            section .cards .card3 > button{
+               margin-top:-5px; 
+            }
+            section .cards .card4{
+                width:45%;
+                margin-bottom:8px;
+            }       
+
+        }*/
+        
+        @media (min-width:608px) and (max-width:800px){
+            main{
+                height:900px;
+                margin-bottom:350px;
+            }
+            main .Project{
+                height:550px;
+                margin-bottom:5px;
+            }
+            main .Project1{
+                height:550px;
+                margin-bottom:5px;
+            }
+            main .Project .one{
+                width:45%;
+                margin-bottom:2px;
+            }
+            main .Project .two{
+                width:45%;
+                margin-bottom:2px;
+            }
+            main .Project .three{
+                width:45%;
+                margin-bottom:2px;
+            }
+            main .Project .four{
+                width:45%;
+                margin-bottom:2px;
+            }
+            main .Project .one p{
+                width:65%;
+            }
+            main .Project div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .five{
+                width:45%;
+                margin-bottom:2px;
+            }
+            main .Project1 div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .six{
+                width:45%;
+                margin-bottom:2px;
+            }
+            main .Project1 .seven{
+                width:45%;
+                margin-bottom:2px;
+            }
+            main .Project1 .eight{
+                width:45%;
+                margin-bottom:2px;
+            }
+            main .Project1 .five p{
+                width:65%;
+            }
+            .AB{
+                height:1200px;
+        
+
+            }
+            section .cards{
+                margin-left:10px;
+            }
+            section .cards .card1{
+                width:45%;
+                margin-bottom:8px;
+            }
+            section .cards .card2{
+                width:45%;
+                margin-bottom:8px;
+            }
+            section .cards .card3{
+                width:45%;
+                margin-bottom:8px;
+            }
+            /*section .cards .card3 > button{
+               margin-top:-5px; 
+            }*/
+            section .cards .card4{
+                width:45%;
+                margin-bottom:8px;
+            }
+        }
+        @media (min-width:548px) and (max-width:607px){
+            main{
+                height:900px;
+                margin-bottom:900px;
+            }
+            main .Project{
+                height:800px;
+                margin-bottom:40px;
+            }
+            main .Project1{
+                height:800px;
+                margin-bottom:20px;
+            }
+            main .Project .one{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .two{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .three{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .four{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .one p{
+                width:65%;
+            }
+            main .Project div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .five{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .six{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .seven{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .eight{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .five p{
+                width:65%;
+            }
+            .AB{
+                height:1300px;
+                margin-bottom:800px;
+
+            }
+            section .cards{
+                margin-left:10px;
+            }
+            section .cards .card1{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card2{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card3{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card4{
+                width:75%;
+                margin-bottom:10px;
+            }
+
+
+        }
+        @media (min-width:421px) and (max-width:547px){
+            nav h1{
+                padding-top:5px;
+                padding-bottom:5px;
+                margin-top:0px;
+                margin-bottom:0px;
+            }
+            nav .nav-bar {
+                margin-top:0px;
+            }
+            nav .nav-bar a{
+                padding-top:9px;
+                padding-bottom:9px;
+            }
+            main{
+                height:900px;
+                margin-bottom:900px;
+            }
+            main .Project{
+                height:800px;
+                margin-bottom:40px;
+            }
+            main .Project1{
+                height:800px;
+                margin-bottom:20px;
+            }
+            main .Project .one{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .two{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .three{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .four{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .one p{
+                width:65%;
+            }
+            main .Project div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .five{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .six{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .seven{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .eight{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .five p{
+                width:65%;
+            }
+           
+
+            .AB{
+                height:1300px;
+                margin-bottom:950px;
+
+            }
+            section .cards{
+                margin-left:10px;
+            }
+            section .cards .card1{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card2{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card3{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card4{
+                width:75%;
+                margin-bottom:10px;
+            }
+
+
+        }
+        @media (min-width:321px) and (max-width:420px)
+        {   
+            nav h1{
+                padding-top:5px;
+                padding-bottom:5px;
+                margin-top:0px;
+                margin-bottom:0px;
+            }
+            nav .nav-bar {
+                margin-top:0px;
+            }
+            nav .nav-bar a{
+                padding-top:9px;
+                padding-bottom:9px;
+            }
+            main{
+                height:900px;
+                margin-bottom:900px;
+            }
+            main .Project{
+                height:800px;
+                margin-bottom:40px;
+            }
+            main .Project1{
+                height:800px;
+                margin-bottom:20px;
+            }
+            main .Project .one{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .two{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .three{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .four{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .one p{
+                width:65%;
+            }
+            main .Project div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .five{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 div > p{
+                width:65%;
+                padding-left:35px;
+            }
+            main .Project1 .six{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .seven{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .eight{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .five p{
+                width:65%;
+            }
+           
+
+            .AB{
+                height:1300px;
+                margin-bottom:950px;
+
+            }
+            section .cards{
+                margin-left:10px;
+            }
+            section .cards .card1{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card2{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card3{
+                width:75%;
+                margin-bottom:10px;
+            }
+            section .cards .card4{
+                width:75%;
+                margin-bottom:10px;
+            }
+
+
+        }
+        @media (max-width:320px){
+            nav h1{
+                padding-top:5px;
+                padding-bottom:5px;
+                margin-top:0px;
+                margin-bottom:0px;
+            }
+            nav .nav-bar {
+                margin-top:0px;
+            }
+            nav .nav-bar a{
+                margin-right: 0px;
+                padding-top:9px;
+                padding-bottom:9px;
+            }
+            main{
+                height:900px;
+                margin-bottom:900px;
+            }
+            main .Project{
+                height:800px;
+                margin-bottom:40px;
+            }
+            main .Project1{
+                height:800px;
+                margin-bottom:20px;
+            }
+            main .Project .one{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .two{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .three{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .four{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project .one p{
+                width:75%;
+            }
+            main .Project div > p{
+                width:75%;
+                padding-left:35px;
+            }
+            main .Project1 .five{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 div > p{
+                width:75%;
+                padding-left:35px;
+            }
+            main .Project1 .six{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .seven{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .eight{
+                width:75%;
+                margin-bottom:10px;
+            }
+            main .Project1 .five p{
+                width:75%;
+            }
+           
+
+            .AB{
+                height:1550px;
+                margin-bottom:950px;
+
+            }
+            section .cards{
+                margin-left:10px;
+            }
+            section .cards .card1{
+                width:75%;
+                margin-bottom:50px;
+            }
+            section .cards .card2{
+                width:75%;
+                margin-bottom:50px;
+            }
+            section .cards .card3{
+                width:75%;
+                margin-bottom:50px;
+            }
+            section .cards .card4{
+                width:75%;
+                margin-bottom:50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>BR <span>Architects</span></h1>
+            <div class="nav-bar">
+                <a href="#Projects"> Projects </a>
+                <a href="#About"> About </a>
+                <a href="#contact"> Contact </a>
+            </div>
+        </nav>
+        <div class="front-image">
+            <h1>BR</h1>
+            <h2>Architect</h2>
+        </div>
+    </header>
+    <main id="Projects">
+        <h1> Projects </h1>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <div class="Project">
+            <div class="one">
+                <p>Summer House</p>
+            </div>
+            <div class="two">
+                <p>Brick House</p>
+            </div>
+            <div class="three">
+                <p>Renovated</p>
+            </div>
+            <div class="four">
+                <p>Barn House</p>
+            </div>
+
+        </div>
+        <div class="Project1">
+            <div class="five">
+                <p>Summer House</p>
+            </div>
+            <div class="six">
+                <p>Brick House</p>
+            </div>
+            <div class="seven">
+                <p>Renovated</p>
+            </div>
+            <div class="eight">
+                <p>Barn House</p>
+            </div>
+
+        </div>
+    </main>
+    <section class="AB" id="About">
+        <h1 class="head">About</h1>
+        <br>
+        <hr>
+        <p class="intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor labore accusantium consequatur
+            facere
+            eligendi! Consectetur quis fugit voluptas totam debitis quasi reiciendis ea, distinctio sapiente culpa
+            recusandae modi facere beatae in impedit pariatur, necessitatibus tenetur sequi aperiam maiores! Labore
+            repellat, at, a aspernatur non, provident nemo in tempora dolor ut minima quidem architecto corporis ipsam
+            nisi error nostrum? Quibusdam error dolor tenetur sapiente quaerat, repudiandae aspernatur architecto
+            praesentium veniam blanditiis illum. Incidunt, quod temporibus velit corrupti suscipit dolorem!</p>
+        <div class="cards">
+            <div class="card1">
+                <img src="image/card1.jpg" alt="photo">
+                <h1>John Doe </h1>
+                <h4> CEO & Founder </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis in nam eaque.</p>
+                <button type="button">Contact</button>
+            </div>
+            <div class="card2">
+                <img src="image/card2.jpg" alt="photo">
+                <h1>Jane Doe </h1>
+                <h4>Architect </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus omnis. </p>
+                <button type="button">Contact</button>
+            </div>
+            <div class="card3">
+                <img src="image/card3.jpg" alt="photo">
+                <h1>Mike Ross </h1>
+                <h4> Architect </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat harum modi nisi nulla .</p>
+                <button type="button">Contact</button>
+            </div>
+            <div class="card4">
+                <img src="image/card4.jpg" alt="photo">
+                <h1>Dan Star </h1>
+                <h4> Architect </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet consectetur.</p>
+                <button type="button">Contact</button>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1>Contact</h1>
+        <br>
+        <hr>
+        <p>Lets get in touch and talk about your next project.</p>
+        <form>
+            <input type="text" placeholder="Name"><br>
+            <input type="text" placeholder="Email"><br>
+            <input type="text" placeholder="Subject"><br>
+            <input type="text" placeholder="Comment"><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+    <footer>
+        Copyright &copy;
+    </footer>
+</body>
+
+</html>
